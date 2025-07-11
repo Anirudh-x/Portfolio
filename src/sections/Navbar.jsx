@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { socials } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -125,23 +126,26 @@ const Navbar = () => {
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
             <p className="text-xl tracking-widest lowercase text-pretty">
-              JohnDoe@gmail.com
+              aniruddharautofficial@gmail.com
             </p>
           </div>
           <div className="font-light">
             <p className="tracking-wider text-white/50">Social Media</p>
-            <div className="flex flex-col flex-wrap md:flex-row gap-x-2">
-              {socials.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
-                >
-                  {"{ "}
-                  {social.name}
-                  {" }"}
-                </a>
-              ))}
+            <div className="flex flex-col flex-wrap md:flex-row justify-around mt-2">
+              <a
+                href="https://www.linkedin.com/in/aniruddha-raut-16a300253/"
+                target="_blank"
+                className="text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
+              >
+                <IoLogoLinkedin className="h-[2rem] w-[2rem]" />
+              </a>
+              <a
+                href="https://github.com/Anirudh-x"
+                target="_blank"
+                className="text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
+              >
+                <IoLogoGithub className="h-[2rem] w-[2rem]" />
+              </a>
             </div>
           </div>
         </div>

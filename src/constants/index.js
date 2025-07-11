@@ -1,78 +1,78 @@
 // index.js
 export const servicesData = [
   {
-    title: "FullStack Development",
+    title: "Full-Stack Development",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "I build robust, secure, and scalable applications from front to back—engineered with clean code, optimized data flow, and smooth integration to power your business with confidence.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        title: "Frontend Excellence",
+        description: "ReactJs, NextJs, TypeScript,Interactive and Responsive UI/UX",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX)",
+        title: "Backend Engineering",
+        description: "REST APIs, Microservices, Authentication Systems",
       },
       {
         title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        description: "Efficient SQL/NoSQL Models, Scalable Schemas, Performance Tuning",
       },
     ],
   },
   {
     title: "DevOps & Cloud Solutions",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "From code to cloud, I ensure your deployments are seamless, secure, and scalable—leveraging automation, monitoring, and cloud infrastructure for uninterrupted performance.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        title: "CI/CD Automation",
+        description: "GitHub Actions, Docker, Kubernetes Pipelines",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Server Infrastructure",
+        description: "Linux Environments, Nginx Configuration, Load Balancing",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "System Optimization",
+        description: "Caching Strategies, Asset Compression, Lighthouse 90+ Performance",
       },
     ],
   },
   {
-    title: "Security & Optimization",
+    title: "Security & Performance",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "Speed and security are non-negotiable. I protect your applications from common vulnerabilities and eliminate bottlenecks to ensure trust, speed, and scalability.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "Code & Security Audits",
+        description: "Refactoring, Vulnerability Scanning, Technical Debt Cleanup",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Penetration Testing",
+        description: "Manual & Automated Testing for Critical Exploits",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "Technical SEO",
+        description: "SSR, Metadata, Structured Data for Visibility & Ranking",
       },
     ],
   },
   {
-    title: "Web & Mobile Apps",
+    title: "Web, Software & Mobile Applications",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "Design meets functionality. I create responsive, high-performance applications for web and mobile—delivering intuitive user experiences across all devices.",
     items: [
       {
         title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        description: "React Native for iOS, Android, and Web. ElectronJs for Windows, Linux and Mac",
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        title: "Progressive Web Apps (PWAs)",
+        description: "Offline Support, Push Notifications, App-Like Feel",
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "E-Commerce Solutions",
+        description: "Custom Checkout, Secure Payments, Real-Time Inventory",
       },
     ],
   },
@@ -80,12 +80,12 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "Mobile Accessories E-commerce",
+    name: "Flownix (No Code Automation Builder)",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
+      "Web application which creates work flow to automate tasks.",
     href: "",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    // image: "/assets/projects/mobile-accessories-store.jpg",
+    // bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -96,12 +96,12 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Plant Shop E-commerce",
+    name: "AetherTalk (AI Powered Meeting Platform)",
     description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
+      "An AI Powere Web Application to arrange online meetings.",
     href: "",
-    image: "/assets/projects/plant-shop.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    // image: "/assets/projects/plant-shop.jpg",
+    // bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -111,12 +111,12 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Apple Tech Marketplace",
+    name: "Harmonic Gesture",
     description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
+      "A Platform which lets you play any musical instrument.",
     href: "",
-    image: "/assets/projects/apple-tech-store.jpg",
-    bgImage: "/assets/backgrounds/map.jpg",
+    // image: "/assets/projects/apple-tech-store.jpg",
+    // bgImage: "/assets/backgrounds/map.jpg",
     frameworks: [
       { id: 1, name: "Blazor" },
       { id: 2, name: "ASP.NET Core" },
@@ -126,12 +126,12 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Electronics & Gadgets Store",
+    name: "WebSecure",
     description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
+      "A multi-functional web penetration testing Web Application.",
     href: "",
-    image: "/assets/projects/electronics-store.jpg",
-    bgImage: "/assets/backgrounds/poster.jpg",
+    // image: "/assets/projects/electronics-store.jpg",
+    // bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [
       { id: 1, name: "Vue.js" },
       { id: 2, name: "Laravel" },
@@ -139,43 +139,9 @@ export const projects = [
       { id: 4, name: "SCSS" },
     ],
   },
-  {
-    id: 5,
-    name: "Home Decor Marketplace",
-    description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
-    href: "",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
-    frameworks: [
-      { id: 1, name: "Angular" },
-      { id: 2, name: "Firebase" },
-      { id: 3, name: "GraphQL" },
-      { id: 4, name: "Material UI" },
-    ],
-  },
-  {
-    id: 6,
-    name: "Digital Game Store",
-    description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
-    href: "",
-    image: "/assets/projects/game-store.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
-    frameworks: [
-      { id: 1, name: "Svelte" },
-      { id: 2, name: "Node.js" },
-      { id: 3, name: "MongoDB" },
-      { id: 4, name: "Chakra UI" },
-    ],
-  },
+  
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
-  {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
-  },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/aniruddha-raut-16a300253/" },
+  { name: "GitHub", href: "https://github.com/Anirudh-x" },
 ];
