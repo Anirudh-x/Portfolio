@@ -131,7 +131,7 @@ const Navbar = () => {
           </div>
           <div className="font-light">
             <p className="tracking-wider text-white/50">Social Media</p>
-            <div className="flex flex-wrap md:flex-row justify-around mt-2">
+            <div className="flex flex-wrap md:flex-row gap-2 mt-2">
               <a
                 href="https://www.linkedin.com/in/aniruddha-raut-16a300253/"
                 target="_blank"
