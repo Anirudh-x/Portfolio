@@ -8,16 +8,16 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   const text = `I Know How to Get your work done`;
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen">
+    <section id="home" className="flex flex-col justify-end min-h-screen ">
       <AnimatedHeaderSection
         subTitle={"Crafting permium experiences for elite clients."}
-        title={"Aniruddha Raut"}
+        title={"Anirudh Raut"}
         text={text}
         textColor={"text-black"}
       />
       <figure
         className="absolute inset-0 -z-50"
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "100%", height: "100vh" }}
       >
         <Canvas
           shadows
@@ -25,7 +25,7 @@ const Hero = () => {
         >
           <ambientLight intensity={0.5} />
           <Float speed={1}>
-            <Planet scale={isMobile ? 0.7 : 1} />
+            <Planet scale={isMobile ? 0.5 : 1} />
           </Float>
           <Environment resolution={256}>
             <group rotation={[-Math.PI / 3, 4, 1]}>
