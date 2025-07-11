@@ -61,7 +61,7 @@ const Contact = () => {
               <h2>Social Media</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <div className="flex flex-wrap gap-2">
-                <div className="flex flex-col flex-wrap md:flex-row gap-4 mt-2">
+                <div className="flex flex-wrap md:flex-row gap-4 mt-2">
                   <a
                     href="https://www.linkedin.com/in/aniruddha-raut-16a300253/"
                     target="_blank"
