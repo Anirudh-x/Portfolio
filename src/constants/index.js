@@ -80,12 +80,12 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "Flownix (No Code Automation Builder)",
+    name: "Flownix",
+    subtitle: "No Code Automation Builder",
     description:
       "Web application which creates work flow to automate tasks.",
     href: "",
-    // image: "/assets/projects/mobile-accessories-store.jpg",
-    // bgImage: "/assets/backgrounds/blanket.jpg",
+    image: "",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -96,7 +96,8 @@ export const projects = [
   },
   {
     id: 2,
-    name: "AetherTalk (AI Powered Meeting Platform)",
+    name: "AetherTalk",
+    subtitle: "AI Powered Meeting Platform",
     description:
       "An AI Powere Web Application to arrange online meetings.",
     href: "",
@@ -112,6 +113,7 @@ export const projects = [
   {
     id: 3,
     name: "Harmonic Gesture",
+    subtitle: "No Code Automation Builder",
     description:
       "A Platform which lets you play any musical instrument.",
     href: "",
@@ -127,6 +129,7 @@ export const projects = [
   {
     id: 4,
     name: "WebSecure",
+    subtitle: "No Code Automation Builder",
     description:
       "A multi-functional web penetration testing Web Application.",
     href: "",
