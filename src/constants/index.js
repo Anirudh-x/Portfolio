@@ -80,7 +80,7 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "Flownix",
+    name: "WebSecure",
     subtitle: "No Code Automation Builder",
     description:
       "Web application which creates work flow to automate tasks.",
@@ -101,7 +101,7 @@ export const projects = [
     description:
       "An AI Powere Web Application to arrange online meetings.",
     href: "",
-    image: "/assets/projects/plant-shop.jpg",
+    image: "/images/projects/vertex.webp",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -116,8 +116,7 @@ export const projects = [
     description:
       "A Platform which lets you play any musical instrument.",
     href: "",
-    // image: "/assets/projects/apple-tech-store.jpg",
-    // bgImage: "/assets/backgrounds/map.jpg",
+    image: "/images/projects/harmonicgesture.webp",
     frameworks: [
       { id: 1, name: "Blazor" },
       { id: 2, name: "ASP.NET Core" },
@@ -132,8 +131,7 @@ export const projects = [
     description:
       "A multi-functional web penetration testing Web Application.",
     href: "",
-    // image: "/assets/projects/electronics-store.jpg",
-    // bgImage: "/assets/backgrounds/poster.jpg",
+    image: "/images/projects/burger.webp",
     frameworks: [
       { id: 1, name: "Vue.js" },
       { id: 2, name: "Laravel" },
