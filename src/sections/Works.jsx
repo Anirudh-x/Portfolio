@@ -99,7 +99,7 @@ const Works = () => {
   };
 
   return (
-    <section id="work" className="flex flex-col min-h-screen">
+    <section id="work" className="flex flex-col min-h-screen pb-20">
       <AnimatedHeaderSection
         subTitle={"My"}
         title={"Works"}
@@ -108,21 +108,21 @@ const Works = () => {
         withScrollTrigger={true}
       />
       <div
-        className="relative font-light justify-center items-center grid sm:grid-cols-2 md:grid-cols-3"
+        className="relative font-light justify-center items-center grid lg:grid-cols-2 xl:grid-cols-3"
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
           <div
             key={project.id}
             id="project"
-            className="relative flex gap-1 py-5 cursor-pointer group md:gap-0"
+            className="relative flex gap-1 py-5 group md:gap-0"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
             {/* overlay */}
             <div ref={(el) => { overlayRefs.current[index] = el; }} className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path" />
 
-            <div className=" relative flex flex-col gap-2 justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
+            <div className=" relative flex flex-col gap-2 justify-between px-10 text-black transition-all duration-500  md:group-hover:text-white">
               <h2 className="lg:text-[32px] text-[26px] leading-none">
                 {project.name}
               </h2>
@@ -130,12 +130,13 @@ const Works = () => {
                 {project.subtitle}
               </h4>
 
-              <div className="flex flex-col items-center justify-center border h-[16rem] w-[30rem]">
+              <div>
+                <img src={project.image}  className="flex flex-col items-center justify-center border h-[16rem] w-[26rem] object-fit cursor-pointer"/>
               </div>
 
               <div className="w-full flex justify-around">
-                <button>View Details</button>
-                <button>Go to Project</button>
+                <button className="cursor-pointer">View Details</button>
+                <button className="cursor-pointer">Go to Project</button>
               </div>
             </div>
 

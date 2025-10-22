@@ -85,7 +85,7 @@ export const projects = [
     description:
       "Web application which creates work flow to automate tasks.",
     href: "",
-    image: "",
+    image: "/images/projects/websecure.webp",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -101,8 +101,7 @@ export const projects = [
     description:
       "An AI Powere Web Application to arrange online meetings.",
     href: "",
-    // image: "/assets/projects/plant-shop.jpg",
-    // bgImage: "/assets/backgrounds/curtains.jpg",
+    image: "/assets/projects/plant-shop.jpg",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
