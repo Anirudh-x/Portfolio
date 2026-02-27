@@ -81,17 +81,16 @@ export const projects = [
   {
     id: 1,
     name: "WebSecure",
-    subtitle: "No Code Automation Builder",
+    subtitle: "Network Security Scanning and Analysis Platform",
     description:
-      "Web application which creates work flow to automate tasks.",
-    href: "",
+      "WebSecure is a full-stack web application built with React and Flask that provides tools for network scanning, IP resolution, and geolocation using Nmap to aid in cybersecurity assessments.",
+    href: "https://web-secure-five.vercel.app/",
     image: "/images/projects/websecure.webp",
     frameworks: [
       { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Node.js" },
+      { id: 2, name: "Flask" },
+      { id: 3, name: "Tailwind CSS" },
       { id: 4, name: "MongoDB" },
-      { id: 5, name: "Tailwind CSS" },
     ],
   },
   {
@@ -100,7 +99,7 @@ export const projects = [
     subtitle: "AI Powered Meeting Platform",
     description:
       "An AI Powere Web Application to arrange online meetings.",
-    href: "",
+    href: "https://aether-talk-snowy.vercel.app/",
     image: "/images/projects/vertex.webp",
     frameworks: [
       { id: 1, name: "React" },
@@ -112,10 +111,10 @@ export const projects = [
   {
     id: 3,
     name: "Harmonic Gesture",
-    subtitle: "No Code Automation Builder",
+    subtitle: "Gesture-Based Music Control",
     description:
       "A Platform which lets you play any musical instrument.",
-    href: "",
+    href: "https://harmonic-gesture-ashy.vercel.app/",
     image: "/images/projects/harmonicgesture.webp",
     frameworks: [
       { id: 1, name: "Blazor" },
@@ -127,16 +126,17 @@ export const projects = [
   {
     id: 4,
     name: "WebSecure",
-    subtitle: "No Code Automation Builder",
+    subtitle: "Network Security Scanning and Analysis Platform",
     description:
-      "A multi-functional web penetration testing Web Application.",
-    href: "",
-    image: "/images/projects/burger.webp",
+      "WebSecure is a full-stack web application built with React and Flask that provides tools for network scanning, IP resolution, and geolocation using Nmap to aid in cybersecurity assessments.",
+    href: "https://web-secure-five.vercel.app/",
+    repo:"",
+    image: "/images/projects/websecure.webp",
     frameworks: [
-      { id: 1, name: "Vue.js" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "MySQL" },
-      { id: 4, name: "SCSS" },
+      { id: 1, name: "React" },
+      { id: 2, name: "Flask" },
+      { id: 3, name: "Tailwind CSS" },
+      { id: 4, name: "MongoDB" },
     ],
   },
   

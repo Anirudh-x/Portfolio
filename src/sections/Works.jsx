@@ -111,7 +111,7 @@ const Works = () => {
         className="relative font-light justify-center items-center grid lg:grid-cols-2 xl:grid-cols-3"
         onMouseMove={handleMouseMove}
       >
-        {projects.map((project, index) => (
+        {projects.map((project, index) => ( 
           <div
             key={project.id}
             id="project"
