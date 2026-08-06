@@ -36,9 +36,8 @@ const App = () => {
         </div>
       )}
       <div
-        className={`${
-          isReady ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000`}
+        className={`${isReady ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-1000`}
       >
         <Navbar />
         <Hero />
@@ -46,7 +45,7 @@ const App = () => {
         <Services />
         <About />
         {/* <Works /> */}
-        {/* <ContactSummary /> */}
+        <ContactSummary />
         <Contact />
       </div>
     </ReactLenis>

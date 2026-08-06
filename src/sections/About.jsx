@@ -10,9 +10,9 @@ const About = () => {
   with precision and reliability.`;
   const aboutText = `A Professional Engineer with high quality solutions, crafted through a blend of precision, innovation, and a deep understanding of technology. I specialize in building scalable and secure full-stack web applications, automating complex workflows, and solving real-world problems with code.
 
-  🎯 Built scable web apps.
-  🎯 Built real-world solutions which saved upto 90% of business resources.
-  🎯 Secured highly confidential web resources.
+  - Built scable web apps.
+  - Built real-world solutions which saved upto 90% of business resources.
+  - Secured highly confidential web resources.
   `;
   const imgRef = useRef(null);
   useGSAP(() => {
