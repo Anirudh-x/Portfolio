@@ -76,6 +76,25 @@ export const servicesData = [
       },
     ],
   },
+  {
+    title: "Automation & AI Integration",
+    description:
+      "I design and deploy intelligent automation pipelines that eliminate repetitive work, reduce costs, and unlock new capabilities—connecting your tools, data, and workflows with precision.",
+    items: [
+      {
+        title: "Workflow Automation",
+        description: "n8n, Zapier, Make — multi-step pipelines, triggers & conditional logic",
+      },
+      {
+        title: "AI & LLM Integration",
+        description: "OpenAI, Gemini, LangChain — chatbots, agents, RAG pipelines",
+      },
+      {
+        title: "Business Process Automation",
+        description: "CRM sync, invoice generation, data scraping, scheduled reporting",
+      },
+    ],
+  },
 ];
 export const projects = [
   {
@@ -136,6 +155,7 @@ export const testimonials = [
     content:
       "Anirudh delivered our entire platform in record time without cutting a single corner. His command over full-stack architecture and attention to performance is unlike anyone I've worked with. Our app went from concept to production-ready in six weeks.",
     rating: 5,
+    date: "2026-09-15T10:30:00Z",
   },
   {
     id: 2,
@@ -144,6 +164,7 @@ export const testimonials = [
     content:
       "The security audit Anirudh conducted on our platform uncovered vulnerabilities we never knew existed—and he fixed every single one. His penetration testing is thorough, methodical, and genuinely impressive. We sleep better at night because of his work.",
     rating: 5,
+    date: "2026-08-08T14:20:00Z",
   },
   {
     id: 3,
@@ -152,6 +173,7 @@ export const testimonials = [
     content:
       "What sets Anirudh apart is his ability to translate business requirements into clean, scalable code. Our DevOps pipeline was a mess before he stepped in—CI/CD, containerization, load balancing—he handled everything seamlessly.",
     rating: 5,
+    date: "2026-10-07T09:00:00Z",
   },
   {
     id: 4,
@@ -160,6 +182,7 @@ export const testimonials = [
     content:
       "We hired Anirudh to build our client-facing web app and e-commerce checkout. The end result exceeded expectations—buttery smooth UX, blazing performance scores, and zero payment issues post-launch. Highly recommended.",
     rating: 5,
+    date: "2026-07-08T16:45:00Z",
   },
   {
     id: 5,
@@ -168,6 +191,7 @@ export const testimonials = [
     content:
       "Anirudh integrated our React Native mobile app with our existing backend and third-party APIs in under two weeks. His communication was clear, his code was clean, and he was proactive about edge cases. A true professional.",
     rating: 5,
+    date: "2026-10-01T11:00:00Z",
   },
 ];
 export const socials = [

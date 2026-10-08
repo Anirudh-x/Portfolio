@@ -4,6 +4,36 @@ import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+// ─── Relative Time Utility ─────────────────────────────────────────────────
+const getRelativeTime = (isoDate) => {
+  const now = new Date();
+  const past = new Date(isoDate);
+  const diffMs = now - past;
+
+  if (diffMs < 0) return "just now"; // future-proof for live submissions
+
+  const seconds = Math.floor(diffMs / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours   = Math.floor(minutes / 60);
+  const days    = Math.floor(hours / 24);
+  const weeks   = Math.floor(days / 7);
+  const months  = Math.floor(days / 30);
+  const years   = Math.floor(days / 365);
+
+  if (seconds < 60)    return "just now";
+  if (minutes < 60)    return minutes === 1 ? "a minute ago" : `${minutes} minutes ago`;
+  if (hours < 24)      return hours === 1 ? "an hour ago" : `${hours} hours ago`;
+  if (days === 1)      return "a day ago";
+  if (days < 7)        return `${days} days ago`;
+  if (weeks === 1)     return "a week ago";
+  if (weeks < 5)       return `${weeks} weeks ago`;
+  if (months === 1)    return "a month ago";
+  if (months < 12)     return `${months} months ago`;
+  if (years === 1)     return "a year ago";
+  return `${years} years ago`;
+};
+// ──────────────────────────────────────────────────────────────────────────
+
 const StarRating = ({ rating }) => (
   <div className="flex gap-1">
     {Array.from({ length: rating }).map((_, i) => (
@@ -27,7 +57,6 @@ const Testimonials = () => {
   const text = `Real words\n  from real clients.`;
 
   useGSAP(() => {
-    // Animate the progress bar width
     gsap.to(progressRef.current, {
       width: `${((activeIndex + 1) / testimonials.length) * 100}%`,
       duration: 0.5,
@@ -36,7 +65,6 @@ const Testimonials = () => {
   }, [activeIndex]);
 
   useGSAP(() => {
-    // Section entrance animation
     gsap.from(sectionRef.current, {
       opacity: 0,
       y: 40,
@@ -53,25 +81,20 @@ const Testimonials = () => {
     if (index < 0 || index >= testimonials.length) return;
     const prev = cardRefs.current[activeIndex];
     const next = cardRefs.current[index];
-
     const direction = index > activeIndex ? 1 : -1;
 
-    // Animate out current
     if (prev) {
       gsap.to(prev, {
         x: -60 * direction,
         opacity: 0,
         duration: 0.3,
         ease: "power2.in",
-        onComplete: () => {
-          gsap.set(prev, { x: 0, opacity: 0 });
-        },
+        onComplete: () => gsap.set(prev, { x: 0, opacity: 0 }),
       });
     }
 
     setActiveIndex(index);
 
-    // Animate in next
     if (next) {
       gsap.fromTo(
         next,
@@ -100,7 +123,7 @@ const Testimonials = () => {
         ref={sectionRef}
         className="flex flex-col flex-1 px-6 md:px-10 pb-20 gap-12"
       >
-        {/* Active card */}
+        {/* Sliding cards */}
         <div className="relative overflow-hidden">
           {testimonials.map((t, i) => (
             <div
@@ -113,18 +136,35 @@ const Testimonials = () => {
               }}
             >
               <div className="flex flex-col gap-8 max-w-4xl">
-                <StarRating rating={t.rating} />
+                {/* Stars + time badge on same row */}
+                <div className="flex items-center gap-4">
+                  <StarRating rating={t.rating} />
+                  {t.date && (
+                    <span className="flex items-center gap-1.5 text-xs font-light tracking-widest text-white/30 uppercase">
+                      <svg
+                        className="w-3 h-3 shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                      {getRelativeTime(t.date)}
+                    </span>
+                  )}
+                </div>
+
                 <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed">
                   &ldquo;{t.content}&rdquo;
                 </blockquote>
+
                 <div className="flex items-center gap-4">
                   {/* Initials avatar */}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#cfa355]/20 border border-[#cfa355]/40 flex items-center justify-center">
                     <span className="text-[#cfa355] font-light text-sm tracking-widest">
-                      {t.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
+                      {t.name.split(" ").map((n) => n[0]).join("")}
                     </span>
                   </div>
                   <div>
@@ -137,9 +177,15 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
-          {/* Spacer so the container has height */}
+
+          {/* Invisible spacer — mirrors the active card's layout to give the container height */}
           <div className="invisible flex flex-col gap-8 max-w-4xl">
-            <StarRating rating={5} />
+            <div className="flex items-center gap-4">
+              <StarRating rating={5} />
+              <span className="text-xs tracking-widest text-white/30 uppercase">
+                {active.date ? getRelativeTime(active.date) : ""}
+              </span>
+            </div>
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed">
               &ldquo;{active.content}&rdquo;
             </blockquote>
@@ -155,7 +201,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Controls row */}
+        {/* Controls */}
         <div className="flex flex-col gap-6 mt-auto">
           {/* Progress bar */}
           <div className="w-full h-px bg-white/10 relative">
@@ -168,7 +214,7 @@ const Testimonials = () => {
             />
           </div>
 
-          {/* Navigation */}
+          {/* Navigation row */}
           <div className="flex items-center justify-between">
             {/* Counter */}
             <span className="text-white/30 text-sm font-light tracking-widest">
@@ -192,7 +238,7 @@ const Testimonials = () => {
               ))}
             </div>
 
-            {/* Arrow buttons */}
+            {/* Arrows */}
             <div className="flex gap-4">
               <button
                 onClick={() => goTo(activeIndex - 1)}
@@ -206,12 +252,7 @@ const Testimonials = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M15 19l-7-7 7-7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button
@@ -226,12 +267,7 @@ const Testimonials = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M9 5l7 7-7 7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>

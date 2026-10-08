@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceSummary = () => {
   useGSAP(() => {
     gsap.to("#title-service-1", {
-      xPercent: 20,
+      xPercent: -20,
       scrollTrigger: {
         target: "#title-service-1",
         scrub: true,
@@ -35,9 +35,17 @@ const ServiceSummary = () => {
   });
   return (
     <section className="mt-20 overflow-hidden font-light leading-snug text-center mb-42 contact-text-responsive">
-      <div id="title-service-1">
+      {/* Row 1: Architecture — Automation */}
+      <div
+        id="title-service-1"
+        className="flex items-center justify-center gap-3 translate-x-16"
+      >
         <p>Architecture</p>
+        <div className="w-10 h-1 md:w-32 bg-gold" />
+        <p className="italic">Automation</p>
       </div>
+
+      {/* Row 2: Development — Deployment */}
       <div
         id="title-service-2"
         className="flex items-center justify-center gap-3 translate-x-16"
@@ -46,6 +54,8 @@ const ServiceSummary = () => {
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>Deployment</p>
       </div>
+
+      {/* Row 3: Web — Android — IOS */}
       <div
         id="title-service-3"
         className="flex items-center justify-center gap-3 -translate-x-48"
@@ -56,6 +66,8 @@ const ServiceSummary = () => {
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>IOS</p>
       </div>
+
+      {/* Row 4: Softwares */}
       <div id="title-service-4" className="translate-x-48">
         <p>Softwares</p>
       </div>
