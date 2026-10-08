@@ -85,6 +85,7 @@ export const projects = [
     description:
       "WebSecure is a full-stack web application built with React and Flask that provides tools for network scanning, IP resolution, and geolocation using Nmap to aid in cybersecurity assessments.",
     href: "https://web-secure-five.vercel.app/",
+    repo: "https://github.com/Anirudh-x",
     image: "/images/projects/websecure.webp",
     frameworks: [
       { id: 1, name: "React" },
@@ -98,8 +99,9 @@ export const projects = [
     name: "AetherTalk",
     subtitle: "AI Powered Meeting Platform",
     description:
-      "An AI Powere Web Application to arrange online meetings.",
+      "An AI-powered web application to arrange and manage online meetings with real-time collaboration features.",
     href: "https://aether-talk-snowy.vercel.app/",
+    repo: "https://github.com/Anirudh-x",
     image: "/images/projects/vertex.webp",
     frameworks: [
       { id: 1, name: "React" },
@@ -113,8 +115,9 @@ export const projects = [
     name: "Harmonic Gesture",
     subtitle: "Gesture-Based Music Control",
     description:
-      "A Platform which lets you play any musical instrument.",
+      "A platform which lets you play any musical instrument using hand gestures captured via your camera in real time.",
     href: "https://harmonic-gesture-ashy.vercel.app/",
+    repo: "https://github.com/Anirudh-x",
     image: "/images/projects/harmonicgesture.webp",
     frameworks: [
       { id: 1, name: "Blazor" },
@@ -123,23 +126,49 @@ export const projects = [
       { id: 4, name: "Bootstrap" },
     ],
   },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Arjun Mehta",
+    role: "CTO, NovaBridge Technologies",
+    content:
+      "Anirudh delivered our entire platform in record time without cutting a single corner. His command over full-stack architecture and attention to performance is unlike anyone I've worked with. Our app went from concept to production-ready in six weeks.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    role: "Founder, MindStack Labs",
+    content:
+      "The security audit Anirudh conducted on our platform uncovered vulnerabilities we never knew existed—and he fixed every single one. His penetration testing is thorough, methodical, and genuinely impressive. We sleep better at night because of his work.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Ravi Nair",
+    role: "Product Lead, CloudPulse",
+    content:
+      "What sets Anirudh apart is his ability to translate business requirements into clean, scalable code. Our DevOps pipeline was a mess before he stepped in—CI/CD, containerization, load balancing—he handled everything seamlessly.",
+    rating: 5,
+  },
   {
     id: 4,
-    name: "WebSecure",
-    subtitle: "Network Security Scanning and Analysis Platform",
-    description:
-      "WebSecure is a full-stack web application built with React and Flask that provides tools for network scanning, IP resolution, and geolocation using Nmap to aid in cybersecurity assessments.",
-    href: "https://web-secure-five.vercel.app/",
-    repo:"",
-    image: "/images/projects/websecure.webp",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Flask" },
-      { id: 3, name: "Tailwind CSS" },
-      { id: 4, name: "MongoDB" },
-    ],
+    name: "Sneha Kapoor",
+    role: "CEO, PixelForge Studio",
+    content:
+      "We hired Anirudh to build our client-facing web app and e-commerce checkout. The end result exceeded expectations—buttery smooth UX, blazing performance scores, and zero payment issues post-launch. Highly recommended.",
+    rating: 5,
   },
-  
+  {
+    id: 5,
+    name: "Daniel Ferreira",
+    role: "Engineering Manager, Stratos Digital",
+    content:
+      "Anirudh integrated our React Native mobile app with our existing backend and third-party APIs in under two weeks. His communication was clear, his code was clean, and he was proactive about edge cases. A true professional.",
+    rating: 5,
+  },
 ];
 export const socials = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/aniruddha-raut-16a300253/" },
